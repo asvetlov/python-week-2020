@@ -76,58 +76,87 @@
 	      <img class="fragment" src="gh-pr-status.png"/>
 	      <img class="fragment" src="gh-pr-status-white.png"/>
 	      <aside class="notes">
-		<ul>
-		  <li>Автомобиль может быть любого цвета, если этот цвет чОрный</li>
-		  <li>Тупоконечники и остроконечники</li>
-		</ul>
+		Автомобиль может быть любого цвета, если этот цвет чОрный
 	      </aside>
 	    </div>
 	  </section>
 	  <section>
-	    <h2>OS и Shell</h2>
-	    <div>
-	      <ul>
-		Shells:
-		<li>sh</li>
-		<li>bash</li>
-		<li>zsh</li>
-		<li>fish</li>
-		<li>cmd.exe</li>
-		<li>powershell</li>
-	      </ul>
-	      <ul>
-		Windows:
-		<li>bold</li>
-		<li><strike>less</strike> → more</li>
-		<li><strike>\n</strike> → \r\n</li>
-	      </ul>
-	    </div>
-		  
-	    <aside class="notes">
-	      Windows, любовь моя!!!
-	    </aside>
+	    <h2>Цвета и стили</h2>
+	    <ul>
+	      <li> normal </li>
+	      <li><font color="darkgreen"> green </font></li>
+	      <li><font color="red"> red </font></li>
+	      <li><font color="gold"> yellow </font></li>
+	      <li><font color="darkblue"> blue </font></li>
+	    </ul>
+	    <ul>
+	      <li><font color="darkcyan"> cyan </font></li>
+	      <li><font color="darkmagenta"> magenta </font></li>
+	      <li><b> bold </b></li>
+	      <li><font color="gray"> dim (gray)</font></li>
+	      <li><u>underline</u></li>
+	    </ul>
+	    <small>
+	    <strike><code>TERM=xterm-256color</code></strike>
+	    <strike><code>COLORTERM=truecolor</code></strike>
+	    </small>
 	  </section>
 	  <section>
-	    <h2>Цвета</h2>
-	    GREEN RED YELLOW
-	    CYAN MAGENTA
-	    BRIGHT (BOLD) DIM (GRAY)
-	    UNDERLINE (no win?)
-	    LSCOLORS / LS_COLORS
-	    COLORTERM
+	    <h2>ENV VARS</h2>
+	    <h4>как у <strike>взрослых</strike> ls</h4>
+	    <ul>
+	      <li><code>LSCOLORS=<font color="darkblue">e</font>x<font color="darkmagenta">f</font>x<font color="darkgreen">c</font>x<font color="gold">d</font>x<font color="red">b</font>x<font color="darkblue">e</font><font color="darkcyan">g</font><font color="darkblue">e</font><font color="gold">d</font>a<font color="red">b</font>a<font color="darkcyan">g</font>a<font color="darkgreen">c</font>a<font color="gold">d</font></code></li>
+	      <li><code>LS_COLORS=no=00:<font color="darkblue"><b>di=01;34</b></font>:<font color="darkcyan">ln=00;36</font>:</code><br/>
+                <code><font color="darkmagenta"><b>*.jpg=01;35</b></font>:<font color="darkgreen">*.mp3=00;32</font>:<font color="red">*.tgz=00;31</font>:</code>
+	      </li>
+	    </ul>
 	  </section>
 	  <section>
 	    <h2>Смайлики</h2>
+	    <ul>
+	      <li><code><font color="darkgreen"><b>√</b></font></code></li>
+	      <li><code><font color="red"><b>×</b></font></code></li>
+	      <li><code><strike>&#x1f917;</strike> → □</code></li>	      
+	    </ul>
+	    <aside class="notes">
+	      Математика -- хорошо!
+	      Всегда проверяем доступность в шрифтах, в том числе на Винде
+	    </aside>
 	  </section>
 	  <section>
-	    teminal reset
-	    progress 
-	    screen refresh
-	    ANSI on Windows
+	    <h2>Shell</h2>
+	    <ul>
+	      <li>sh</li>
+	      <li>bash</li>
+	      <li>zsh</li>
+	      <li>fish</li>
+	      <li>cmd.exe</li>
+	      <li>powershell</li>
+	    </ul>
 	  </section>
 	  <section>
 	    <h2>TTY навсегда?</h2>
+	    <ul>
+	      <li><code>script.py | grep abc</code></li>
+	      <li><code>script.py > out.txt</code></li>
+	    </ul>
 	  </section>
+	  <section>
+	    <h2>Windows, любовь моя</h2>
+	    <ul>
+	      <li><strike>less</strike> → more</li>
+	      <li><strike>\n</strike> → \r\n</li>
+	      <li><strike><font color="gray"> dim / gray </font></strike></li>
+	      <li><strike>ANSI</strike> (по умолчанию)</li>
+	      <li><code><strike>◢◣◤◥</strike> → -\|/</code></li>
+	    </ul>
+	  </section>
+	</section>
+	<section>
+	  teminal reset
+	  progress 
+	  screen refresh
+	  ANSI on Windows
 	</section>
       </div>
     </div>
