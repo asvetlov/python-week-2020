@@ -36,16 +36,97 @@
 	  <ul>
 	    <li>20+ лет с Python</li>
 	    <li>CPython Core developer</li>
+	    <li>asyncio</li>
 	    <li>со-автор aiohttp, yarl, multidict и т.д</li>
 	  </ul>
 	</section>
 	<section>
 	  <section>
+	    <h1>Проблемы</h1>
+	    <h6>или</h6>
+	    <h3>Что может пойти не так?</h3>
+	    <img class="r-stretch" src="problem1.jpeg"/>
+	    <aside class="notes">
+	      Я еще в школе научился пользоваться print()!!!
+	    </aside>
+	  </section>
+	  <section>
 	    <h2>Информативность</h2>
 	    <div class="r-stack">
-	      <img class="fragment" src="docker-system-info.png"/>
+	      <img src="docker-system-info.png"/>
 	      <img class="fragment" src="gh-pr-status.png"/>
 	    </div>
+	  </section>
+	  <section>
+	    <h2>Размер шрифта и экрана</h2>
+	    <img src="docker-ps.png"/>
+	  </section>
+	  <section>
+	    <h2>Scrolling & Pager</h2>
+	    <img src="man-git.png"/>
+	    <aside class="notes">
+	      Годно для списков файлов, пользователей, объектов и т.д.
+	    </aside>
+	  </section>
+	  <section>
+	    <h2>Светлый/тёмный цвет фона</h2>
+	    <div class="r-stack">
+	      <img src="black-ford-t.jpg"/>
+	      <img class="fragment" src="eggs.png"/>
+	      <img class="fragment" src="gh-pr-status.png"/>
+	      <img class="fragment" src="gh-pr-status-white.png"/>
+	      <aside class="notes">
+		<ul>
+		  <li>Автомобиль может быть любого цвета, если этот цвет чОрный</li>
+		  <li>Тупоконечники и остроконечники</li>
+		</ul>
+	      </aside>
+	    </div>
+	  </section>
+	  <section>
+	    <h2>OS и Shell</h2>
+	    <div>
+	      <ul>
+		Shells:
+		<li>sh</li>
+		<li>bash</li>
+		<li>zsh</li>
+		<li>fish</li>
+		<li>cmd.exe</li>
+		<li>powershell</li>
+	      </ul>
+	      <ul>
+		Windows:
+		<li>bold</li>
+		<li><strike>less</strike> → more</li>
+		<li><strike>\n</strike> → \r\n</li>
+	      </ul>
+	    </div>
+		  
+	    <aside class="notes">
+	      Windows, любовь моя!!!
+	    </aside>
+	  </section>
+	  <section>
+	    <h2>Цвета</h2>
+	    GREEN RED YELLOW
+	    CYAN MAGENTA
+	    BRIGHT (BOLD) DIM (GRAY)
+	    UNDERLINE (no win?)
+	    LSCOLORS / LS_COLORS
+	    COLORTERM
+	  </section>
+	  <section>
+	    <h2>Смайлики</h2>
+	  </section>
+	  <section>
+	    teminal reset
+	    progress 
+	    screen refresh
+	    ANSI on Windows
+	  </section>
+	  <section>
+	    <h2>TTY навсегда?</h2>
 	  </section>
 	</section>
       </div>
@@ -54,7 +135,7 @@
     <div id="hidden" style="display:none;">
       <div id="header">
         <div id="footer-right">
-	  <img src="logo.svg" width="50%" height="50%">
+	  <img src="logo.svg" width="30%" height="30%">
 	</div>
       </div>
     </div>
@@ -70,6 +151,7 @@
      Reveal.initialize({
        hash: true,
        slideNumber: "c/t",
+       totalTime: 30 * 60,
        // Learn about plugins: https://revealjs.com/plugins/
        plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
      });
