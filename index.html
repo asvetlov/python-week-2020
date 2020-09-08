@@ -84,16 +84,16 @@
 	    <h2>Цвета и стили</h2>
 	    <ul>
 	      <li> normal </li>
-	      <li style="color:darkgreen;"> green </li>
-	      <li><font color="red"> red </font></li>
-	      <li><font color="gold"> yellow </font></li>
-	      <li><font color="darkblue"> blue </font></li>
+	      <li style="color:darkgreen;">green</li>
+	      <li style="color:red;">red</li>
+	      <li style="color:gold;">yellow</li>
+	      <li style="color:darkblue">blue</li>
 	    </ul>
 	    <ul>
-	      <li><font color="darkcyan"> cyan </font></li>
-	      <li><font color="darkmagenta"> magenta </font></li>
-	      <li><b> bold </b></li>
-	      <li><font color="gray"> dim (gray)</font></li>
+	      <li style="color:darkcyan;">cyan</li>
+	      <li style="color:darkmagenta;">magenta</li>
+	      <li><b>bold</b></li>
+	      <li style="color:gray;">dim (gray)</li>
 	      <li><u>underline</u></li>
 	    </ul>
 	    <small>
@@ -114,8 +114,8 @@
 	  <section>
 	    <h2>Смайлики</h2>
 	    <ul>
-	      <li><code><font color="darkgreen"><b>√</b></font></code></li>
-	      <li><code><font color="red"><b>×</b></font></code></li>
+	      <li><code style="color:darkgreen;"><b>√</b></code></li>
+	      <li><code style="color:red;"><b>×</b></code></li>
 	      <li><code><s>&#x1f917;</s> → □</code></li>	      
 	    </ul>
 	    <aside class="notes">
@@ -137,8 +137,11 @@
 	  <section>
 	    <h2>TTY навсегда?</h2>
 	    <ul>
+	      <li><code>not sys.stdout.isatty()</code></li>
 	      <li><code>script.py | grep abc</code></li>
 	      <li><code>script.py > out.txt</code></li>
+	      <li>cron, HTTP сервер и т.д.</li>
+	      <li><s>цвета, стили, размер экрана</s></li>
 	    </ul>
 	  </section>
 	  <section>
@@ -146,7 +149,7 @@
 	    <ul>
 	      <li><s>less</s> → more</li>
 	      <li><s>\n</s> → \r\n</li>
-	      <li><s><font color="gray"> dim / gray </font></s></li>
+	      <li><s style="color:gray;"> dim / gray </s></li>
 	      <li><s>ANSI</s> (по умолчанию)</li>
 	      <li><code><s>◢◣◤◥</s> → -\|/</code></li>
 	    </ul>
