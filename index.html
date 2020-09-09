@@ -259,7 +259,7 @@
 	  </section>
 	  <section>
 	    <h2>Windows не отпускает</h2>
-	    <pre><code data-trim data-noescape class="cpp">
+	    <pre><code data-trim data-noescape class="c">
               #include &lt;windows.h&gt;
 
               HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
@@ -276,13 +276,51 @@
 	</section>
 	<section>
 	  <section>
-	    <h1>Полировка</h1>
+	    <h1>Мелочи</h1>
 	    <img src="polishing.jpg" width="70%" height="70%" />
 	  </section>
 	  <section>
-	    validation (convert())
-	    autocompletion
+	    <h2>Автозаполнение</h2>
+	    <pre><code data-trim data-noescape class="python">
+              import os
+
+              def get_env_vars(ctx, args, incomplete):
+                  return [k for k in os.environ.keys() if incomplete in k]
+
+              @click.command()
+              @click.argument("envvar", type=click.STRING,
+                              autocompletion=get_env_vars)
+              def cmd1(envvar):
+                  click.echo(f"Environment variable: {envvar}")
+                  click.echo(f"Value: {os.environ[envvar]}")
+	    </code></pre>
+	    <small><s>partial completion</s></small>
 	  </section>
+	  <section>
+	    <h2>Валидация</h2>
+	    <pre><code data-trim data-noescape class="python">
+              from yarl import URL
+
+              class UrlType(click.ParamType):
+                  name = "url"
+
+                  def convert(self, val, param, ctx):
+                      try:
+                          return URL(val)
+                      except (TypeError, ValueError):
+                          self.fail(f"{val!r} is not an URL ", param, ctx)
+
+              URL = URLType()
+	    </code></pre>
+
+	    <pre class="fragment"><code data-trim data-noescape class="python">
+              @click.argument("url", type=URL)
+	    </code></pre>
+	  </section>
+	</section>
+	<section>
+	  validation (convert())
+	  autocompletion
 	</section>
 	<section>
 	  <h1>Вопросы?</h1>
