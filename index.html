@@ -18,6 +18,12 @@
        bottom: 0%;
        right: 0%;
      }
+
+     #self-link {
+       position: absolute;
+       bottom: 0%;
+       left: 0%;
+     }
     </style>
   </head>
   <body>
@@ -30,6 +36,7 @@
 	  <div class="title-author">
 	    Андрей Светлов
 	  </div>
+	  <small><a href="https://asvetlov.github.io/python-week-2020/">https://asvetlov.github.io/python-week-2020/</a></small>
 	</section>
 	<section>
 	  <h2>Био</h2>
@@ -201,11 +208,11 @@
 	  </section>
 	  <section>
 	    <h4><s>Big Russian Hammer</s></h2>
-	    <h2>Widgets & Layouts</h2>
-	    <img src="docker-pull.png"/>
-	    <aside class="notes">
-	      попробуй сгороди такое на tqdm!
-	    </aside>
+	      <h2>Widgets & Layouts</h2>
+	      <img src="docker-pull.png"/>
+	      <aside class="notes">
+		попробуй сгороди такое на tqdm!
+	      </aside>
 	  </section>
 	  <section>
 	    <h2>Всё пропало, шеф!</h2>
@@ -250,11 +257,38 @@
                       print(f'You said: {result}')
 	    </code></pre>
 	  </section>
+	  <section>
+	    <h2>Windows не отпускает</h2>
+	    <pre><code data-trim data-noescape class="cpp">
+              #include &lt;windows.h&gt;
+
+              HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+              /* Enable ANSI mode */
+              if (!SetConsoleMode(
+                     hConsole,
+                     ENABLE_PROCESSED_INPUT |
+                     ENABLE_VIRTUAL_TERMINAL_PROCESSING)) {
+                printf("Windows 10 is required\n");
+              }
+	    </code></pre>
+	    <small><s>colorama</s></small>
+	  </section>
 	</section>
 	<section>
-	  ANSI on Windows
-	  validation (convert())
-	  autocompletion
+	  <section>
+	    <h1>Полировка</h1>
+	    <img src="polishing.jpg" width="70%" height="70%" />
+	  </section>
+	  <section>
+	    validation (convert())
+	    autocompletion
+	  </section>
+	</section>
+	<section>
+	  <h1>Вопросы?</h1>
+	  <h4>Делаем консольную программу удобной</h4>
+	  <h4>Андрей Светлов</h4>
+	  <small><a href="https://asvetlov.github.io/python-week-2020/">https://asvetlov.github.io/python-week-2020/</a></small>
 	</section>
       </div>
     </div>
