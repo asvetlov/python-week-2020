@@ -163,12 +163,98 @@
 	      Молоток и напильник у этого Франкенштейна нарисованы не зря!
 	    </aside>
 	  </section>
+	  <section>
+	    <h2>click</h2>
+	    <a href="https://click.palletsprojects.com/">https://click.palletsprojects.com/</a>
+	    <pre><code data-trim data-noescape class="python">
+	       import click
+
+	       click.secho(text, bold=True, fg="green")
+	       styled_text = click.style(text, dim=True, fg="blue")
+	       click.echo(styled_text)
+	       click.unstyle(styled_text)
+	       click.echo_via_pager(long_styled_text)
+	    </code></pre>
+	    <small>Автоматически убирает стили для не-терминала (non-TTY)</small>
+	  </section>
+	  <section>
+	    <h2>Python Prompt Toolkit</h2>
+	    <a href="https://python-prompt-toolkit.readthedocs.io/">https://python-prompt-toolkit.readthedocs.io/</a>
+	    <pre><code data-trim data-noescape class="python">
+	       from prompt_toolkit.shortcuts import ProgressBar
+	       from prompt_toolkit.formatted_text import HTML
+	       import time
+
+	       title = HTML('''Downloading &lt;style bg="yellow" fg="black"&gt;
+                        4 files...&lt;/style&gt;''')
+	       label = HTML('&lt;ansired&gt;some file&lt;/ansired&gt;: ')
+
+	       with ProgressBar(title=title) as pb:
+	           for i in pb(range(800), label=label):
+	               time.sleep(.01)
+	    </code></pre>
+	    <img src="progress.png"/>
+	    <small><s>click.progressbar()</s> <s>tqdm</s></small>
+	    <aside class="notes">
+	      prompt_toolkit -- это не только про fullscreen apps (Tetris & Python REPL)
+	    </aside>
+	  </section>
+	  <section>
+	    <h4><s>Big Russian Hammer</s></h2>
+	    <h2>Widgets & Layouts</h2>
+	    <img src="docker-pull.png"/>
+	    <aside class="notes">
+	      попробуй сгороди такое на tqdm!
+	    </aside>
+	  </section>
+	  <section>
+	    <h2>Всё пропало, шеф!</h2>
+	    <h4>или "Где мой курсор?"</h4>
+	    <pre><code data-trim data-noescape class="python">
+              def main():
+                  try:
+                      ...
+                  finally:
+                      # Soft Reset WITHOUT Clear Screen
+                      sys.stdout.write("\x1b[!p")
+                      sys.stdout.flush()
+	    </code></pre>
+	  </section>
+	  <section>
+	    <h2>asyncio + click</h2>
+	    <pre><code data-trim data-noescape class="python">
+              @click.command()
+              def main():
+                  with AsyncioRunner() as runner:
+                      runner.run(async_func())
+	    </code></pre>
+	    <pre class="fragment"><code data-trim data-noescape class="python">
+              @async_command()
+              async def main():
+                  await async_func()
+	    </code></pre>
+	  </section>
+	  <section>
+	    <h2>asyncio + prompt_toolkit</h2>
+	    <pre><code data-trim data-noescape class="python">
+              from prompt_toolkit import PromptSession
+              from prompt_toolkit.patch_stdout import patch_stdout
+
+              async def async_func():
+                  session = PromptSession()
+                  while True:
+                      with patch_stdout():
+                          result = await session.prompt_async(
+                              'Say something: '
+                          )
+                      print(f'You said: {result}')
+	    </code></pre>
+	  </section>
 	</section>
 	<section>
-	  teminal reset
-	  progress 
-	  screen refresh
 	  ANSI on Windows
+	  validation (convert())
+	  autocompletion
 	</section>
       </div>
     </div>
@@ -193,6 +279,7 @@
        hash: true,
        slideNumber: "c/t",
        totalTime: 30 * 60,
+       controlsTutorial: false,
        // Learn about plugins: https://revealjs.com/plugins/
        plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
      });
